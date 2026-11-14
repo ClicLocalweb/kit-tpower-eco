@@ -1,0 +1,70 @@
+nombre,grupo,orden,explode_x_mm,explode_y_mm,explode_z_mm,ancho_x_mm,prof_y_mm,alto_z_mm,material,fuente,descripcion
+Deposito_Cuerpo,deposito,0,0,0,0,1060.0,472.0,491.0,Pintura_negra_satinada,foto/ficha,"Cuerpo cilindrico de chapa, con bandas de refuerzo, patas y bridas soldadas"
+Deposito_Deflector,deposito,0,0,0,0,3.0,452.0,452.0,Acero_cepillado,generico/estimado,Chapa rompeolas interna (generica)
+Grafica_Linea,deposito,0,0,0,0,470.0,0.8,3.1,Grafica_naranja,generico/estimado,Linea grafica
+Grafica_Nombre,deposito,0,0,0,0,325.7,14.3,30.7,Grafica_blanca,generico/estimado,"Nombre del modelo en texto plano, sin logo oficial"
+Grafica_Subtitulo,deposito,0,0,0,0,262.8,1.5,10.2,Grafica_naranja,generico/estimado,Leyenda de concepto
+Manguera_Presion,mangueras,1,260,-330,60,247.6,423.9,838.3,Caucho,foto/ficha,Manguera de presion
+Manguera_Presion_Conexiones,mangueras,1,260,-330,60,196.1,122.7,840.7,Acero_cincado,foto/ficha,Conexiones de la manguera de presion
+Neumatica_Mando_Cuerpo,neumatica,1,560,0,0,56.0,84.0,96.0,Pintura_negra_texturada,foto/ficha,Mando neumatico de cabina
+Neumatica_Mando_Palanca,neumatica,1,560,0,0,61.8,10.0,29.9,Acero_pulido,generico/estimado,Palanca del mando
+Neumatica_Mando_Perilla,neumatica,1,560,0,0,39.0,30.0,34.3,Plastico_naranja,generico/estimado,Perilla del mando (naranja)
+Neumatica_Rollo_Tubo,neumatica,1,360,0,0,25.5,381.4,379.1,Poliamida_negra,foto/ficha,Rollo de tubo neumatico
+Manguera_Succion,mangueras,2,-780,-200,-120,244.4,187.5,244.9,Caucho,foto/ficha,Manguera de succion
+Manguera_Succion_Conexiones,mangueras,2,-780,-200,-120,239.4,92.7,222.0,Acero_cincado,foto/ficha,Conexiones de la manguera de succion
+Manguera_Succion_Espiral,mangueras,2,-780,-200,-120,252.7,187.2,225.7,Poliamida_negra,foto/ficha,Espiral protector
+Valvula_Corredera,valvula,3,-250,0,480,222.0,25.2,25.2,Acero_pulido,generico/estimado,Corredera (spool) - interno generico
+Valvula_Cuerpo,valvula,3,0,0,480,168.0,116.0,104.0,Aluminio_fundido,foto/ficha,"Cuerpo de la valvula direccional de vuelco (catalogo: 140 L/min, 1"" BSP, 190 bar)"
+Valvula_Limitadora,valvula,3,0,0,610,33.8,29.4,70.0,Acero_pulido,generico/estimado,Cartucho de valvula limitadora de presion - generico
+Valvula_Mando_Neumatico,valvula,3,330,0,480,66.0,72.0,91.0,Aluminio_fundido,foto/ficha,Cilindro del mando neumatico
+Valvula_Oring_Izq,valvula,3,-405,0,480,4.8,48.8,48.8,Caucho,generico/estimado,O-ring - interno generico
+Valvula_Oring_Piston,valvula,3,215,0,480,4.8,58.8,58.8,Caucho,generico/estimado,O-ring del piston - interno generico
+Valvula_Piston_Neumatico,valvula,3,215,0,480,24.5,54.0,54.0,Acero_pulido,generico/estimado,Piston del mando neumatico - interno generico
+Valvula_Resorte,valvula,3,-345,0,480,37.6,33.6,32.0,Acero_pulido,generico/estimado,Resorte de centrado - interno generico
+Valvula_Tapa_Resorte,valvula,3,-440,0,480,50.0,62.0,62.0,Aluminio_fundido,foto/ficha,Tapa del resorte
+Valvula_Tapon_1,valvula,3,0,-150,480,45.4,26.0,45.4,Plastico_naranja,foto/ficha,Tapon protector de puerto (en la foto son de color; aca naranja)
+Valvula_Tapon_2,valvula,3,0,-150,480,45.4,26.0,45.4,Plastico_naranja,foto/ficha,Tapon protector de puerto (en la foto son de color; aca naranja)
+Filtro_Cabezal,filtro,4,0,0,350,150.0,160.0,72.0,Aluminio_fundido,foto/ficha,"Cabezal del filtro de retorno, base de la valvula"
+Filtro_Elemento,filtro,4,0,0,215,82.0,82.0,194.0,Papel_filtrante,generico/estimado,Elemento filtrante plisado (catalogo: 150 L/min; forma generica)
+Filtro_Indicador,filtro,4,0,-110,350,44.6,40.0,44.6,Plastico_naranja,foto/ficha,Tapa / indicador de saturacion del filtro (en la foto es verde; aca naranja)
+Filtro_Junta,filtro,4,0,0,270,140.0,140.0,2.5,Caucho,generico/estimado,Junta del cabezal (generica)
+Filtro_Tapas_Elemento,filtro,4,0,0,215,84.0,84.0,200.0,Acero_cincado,generico/estimado,Tapas metalicas del elemento
+Carga_Aro_Naranja,deposito,5,0,0,355,102.4,102.4,4.4,Plastico_naranja,generico/estimado,Aro de sello de la tapa (generico)
+Carga_Canasto_Filtro,deposito,5,0,0,310,68.0,68.0,143.0,Malla_perforada,generico/estimado,Canasto filtro de la boca de carga (generico)
+Carga_Cuello,deposito,5,0,0,160,88.0,88.0,160.0,Pintura_negra_satinada,foto/ficha,Cuello de la boca de carga
+Carga_Tapa_Respiradero,deposito,5,0,0,400,110.8,110.8,66.0,Pintura_negra_texturada,foto/ficha,Tapa con respiradero y filtro de aire
+Deposito_Tapa_Der,deposito,6,210,0,0,101.9,466.7,466.7,Pintura_negra_satinada,foto/ficha,Tapa bombeada del deposito
+Deposito_Tapa_Izq,deposito,6,-210,0,0,101.9,466.7,466.7,Pintura_negra_satinada,foto/ficha,Tapa bombeada del deposito
+Visor_Nivel_1_Cristal,deposito,7,-330,0,0,4.0,23.0,23.0,Visor,generico/estimado,Cristal del visor
+Visor_Nivel_1_Cuerpo,deposito,7,-330,0,0,16.0,36.4,41.7,Acero_pulido,foto/ficha,Visor de nivel de aceite
+Visor_Nivel_2_Cristal,deposito,7,-330,0,0,4.0,23.0,23.0,Visor,generico/estimado,Cristal del visor
+Visor_Nivel_2_Cuerpo,deposito,7,-330,0,0,16.0,36.4,41.7,Acero_pulido,foto/ficha,Visor de nivel de aceite
+Deposito_Tapon_Drenaje,deposito,8,0,0,-70,22.5,25.8,13.0,Acero_cincado,generico/estimado,Tapon de drenaje (generico)
+Soporte_Silentblock_1,soportes,8,0,0,-95,66.0,66.0,32.0,Caucho,foto/ficha,Taco de goma antivibratorio
+Soporte_Silentblock_2,soportes,8,0,0,-95,66.0,66.0,32.0,Caucho,foto/ficha,Taco de goma antivibratorio
+Soporte_Silentblock_3,soportes,8,0,0,-95,66.0,66.0,32.0,Caucho,foto/ficha,Taco de goma antivibratorio
+Soporte_Silentblock_4,soportes,8,0,0,-95,66.0,66.0,32.0,Caucho,foto/ficha,Taco de goma antivibratorio
+Soporte_Bomba,soportes,9,0,0,-190,720.0,150.0,190.0,Pintura_negra_texturada,generico/estimado,Soporte de la bomba bajo el deposito (disposicion de concepto: en el camion la bomba va en la toma de fuerza)
+Soporte_Placa_Chasis_1,soportes,9,0,-120,-190,140.0,54.0,265.0,Pintura_negra_texturada,foto/ficha,Placa de fijacion al chasis
+Soporte_Placa_Chasis_2,soportes,9,0,120,-190,140.0,54.0,265.0,Pintura_negra_texturada,foto/ficha,Placa de fijacion al chasis
+Soporte_Placa_Chasis_3,soportes,9,0,-120,-190,140.0,54.0,265.0,Pintura_negra_texturada,foto/ficha,Placa de fijacion al chasis
+Soporte_Placa_Chasis_4,soportes,9,0,120,-190,140.0,54.0,265.0,Pintura_negra_texturada,foto/ficha,Placa de fijacion al chasis
+Soporte_Travesano_1,soportes,9,0,0,-190,80.0,620.0,60.0,Pintura_negra_texturada,foto/ficha,Travesaño perforado de apoyo
+Soporte_Travesano_2,soportes,9,0,0,-190,80.0,620.0,60.0,Pintura_negra_texturada,foto/ficha,Travesaño perforado de apoyo
+Soporte_Bulon_Taco_1,soportes,10,0,0,-330,19.2,22.0,47.8,Acero_cincado,generico/estimado,Bulon del taco
+Soporte_Bulon_Taco_2,soportes,10,0,0,-330,19.2,22.0,47.8,Acero_cincado,generico/estimado,Bulon del taco
+Soporte_Bulon_Taco_3,soportes,10,0,0,-330,19.2,22.0,47.8,Acero_cincado,generico/estimado,Bulon del taco
+Soporte_Bulon_Taco_4,soportes,10,0,0,-330,19.2,22.0,47.8,Acero_cincado,generico/estimado,Bulon del taco
+Soporte_Bulones_Placa_1,soportes,10,0,-230,-190,108.3,32.5,16.0,Acero_cincado,generico/estimado,Bulones de la placa
+Soporte_Bulones_Placa_2,soportes,10,0,230,-190,108.3,32.5,16.0,Acero_cincado,generico/estimado,Bulones de la placa
+Soporte_Bulones_Placa_3,soportes,10,0,-230,-190,108.3,32.5,16.0,Acero_cincado,generico/estimado,Bulones de la placa
+Soporte_Bulones_Placa_4,soportes,10,0,230,-190,108.3,32.5,16.0,Acero_cincado,generico/estimado,Bulones de la placa
+Bomba_Brida,bomba,11,-310,-520,-250,26.0,150.0,190.0,Fundicion_hierro,foto/ficha,Brida de montaje delantera (4 agujeros)
+Bomba_Buje_Delantero,bomba,11,-215,-520,-250,24.0,65.1,119.2,Acero_cepillado,generico/estimado,Bloque de bujes - interno generico
+Bomba_Buje_Trasero,bomba,11,140,-520,-250,24.0,65.1,119.2,Acero_cepillado,generico/estimado,Bloque de bujes - interno generico
+Bomba_Bulones,bomba,11,400,-520,-250,147.1,105.6,160.2,Acero_cincado,generico/estimado,Bulones pasantes del cuerpo
+Bomba_Cuerpo,bomba,11,0,-520,-250,100.0,134.0,176.0,Fundicion_hierro,foto/ficha,Cuerpo de la bomba de engranajes (catalogo: 82 cm3/rev; geometria generica)
+Bomba_Engranaje_Conducido,bomba,11,-125,-520,-250,96.0,64.2,64.2,Acero_pulido,generico/estimado,Engranaje conducido - interno generico
+Bomba_Engranaje_Motriz,bomba,11,-125,-520,-250,220.0,63.4,63.4,Acero_pulido,generico/estimado,Engranaje motriz con eje estriado - interno generico
+Bomba_Reten,bomba,11,-390,-520,-250,7.0,40.0,40.0,Caucho,generico/estimado,Reten del eje - interno generico
+Bomba_Tapa_Trasera,bomba,11,255,-520,-250,38.0,124.0,176.0,Fundicion_hierro,foto/ficha,Tapa trasera con salida de presion

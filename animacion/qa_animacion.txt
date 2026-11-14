@@ -1,0 +1,36 @@
+CONTROL DE CALIDAD DE LA ANIMACION (FFmpeg / ffprobe) - 2026-11-14T18:10:25Z
+
+== Formato ==
+codec_name=h264
+width=1920
+height=1080
+pix_fmt=yuv420p
+r_frame_rate=24/1
+duration=12.000000
+nb_frames=288
+codec_name=aac
+sample_rate=48000
+channels=2
+duration=12.000000
+tamano_bytes=6545492
+
+== Cuadros negros (blackdetect) ==
+ninguno
+
+== Tramos quietos (freezedetect, -60 dB, 0.4 s) ==
+lavfi.freezedetect.freeze_start: 6.91667
+lavfi.freezedetect.freeze_duration: 0.583333
+lavfi.freezedetect.freeze_end: 7.5
+lavfi.freezedetect.freeze_start: 10.9583
+
+== Audio: silencios (el clic debe caer en 10.6 s) ==
+silence_start: 0
+silence_end: 10.5972 | silence_duration: 10.5972
+silence_start: 10.7636
+silence_end: 12.0107 | silence_duration: 1.24702
+
+== Cierre del ciclo: SSIM cuadro 0 vs cuadro 287 ==
+All:0.999832
+
+== Brillo medio por cuadro (YAVG): saltos mayores a 3 entre cuadros seguidos ==
+saltos: 0 | YAVG min 22.1875 max 42.4144

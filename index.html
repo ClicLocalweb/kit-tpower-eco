@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>T-Power ECO · Kit hidráulico, pieza por pieza (concepto no oficial)</title>
+<meta name="description" content="Concepto no oficial: el kit hidráulico T-Power ECO de 200 litros, desarmado pieza por pieza a medida que bajás.">
+<meta name="theme-color" content="#000000">
+<link rel="preload" as="image" href="frames/d/f_000.webp" media="(min-width: 761px)">
+<link rel="preload" as="image" href="frames/m/f_000.webp" media="(max-width: 760px)">
+<style>
+:root{--o:#ff6a14;--o2:#ff8a3d;--w:#f5f5f7;--g:#86868b;--bg:#000}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg);-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--w);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.o{color:var(--o)}
+
+/* barra superior */
+.nav{position:fixed;inset:0 0 auto 0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:14px clamp(16px,4vw,40px);padding-top:max(14px,env(safe-area-inset-top));background:linear-gradient(#000c,#0000);pointer-events:none}
+.nav>*{pointer-events:auto}
+.brand{font-weight:700;letter-spacing:.08em;font-size:13px}
+.brand small{color:var(--g);font-weight:500;letter-spacing:.04em;margin-left:8px}
+.navbtn{font-size:13px;font-weight:600;padding:8px 14px;border-radius:99px;border:1px solid #ffffff2e;background:#ffffff0f;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:background .25s,border-color .25s}
+.navbtn:hover{background:var(--o);border-color:var(--o);color:#000}
+#bar{position:fixed;left:0;top:0;height:2px;width:100%;z-index:40;background:var(--o);transform-origin:0 50%;transform:scaleX(0);transition:opacity .6s .3s}
+#bar.done{opacity:0}
+
+/* recorrido */
+#track{position:relative;height:880vh}
+#stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+#stage::before{content:"";position:absolute;inset:0;background:radial-gradient(60% 50% at 50% 55%,#ff6a1414,#0000 70%);pointer-events:none}
+canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+.layer{position:absolute;inset:0;pointer-events:none;will-change:opacity,transform;opacity:0}
+
+/* portada */
+#hero{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;text-align:center;padding:clamp(84px,13vh,150px) 20px 0;opacity:1}
+.eyebrow{font-size:clamp(12px,1.1vw,15px);font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--o)}
+h1{font-size:clamp(44px,8.2vw,124px);line-height:.96;font-weight:800;letter-spacing:-.035em;margin-top:12px;background:linear-gradient(180deg,#fff 30%,#9a9aa0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin-top:14px;font-size:clamp(16px,1.7vw,24px);color:var(--g);font-weight:500}
+.hint{position:absolute;left:50%;bottom:max(26px,env(safe-area-inset-bottom));transform:translateX(-50%);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--g);display:flex;flex-direction:column;align-items:center;gap:10px}
+.hint i{width:1px;height:38px;background:linear-gradient(var(--o),#0000);animation:drop 1.8s ease-in-out infinite}
+@keyframes drop{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* botones de piezas */
+.jump{position:absolute;right:clamp(16px,9vw,160px);top:60%;transform:translateY(-50%);display:flex;flex-direction:column;align-items:flex-end;gap:10px;pointer-events:none}
+.jump small{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--g);margin-bottom:2px}
+.jump button{pointer-events:auto;display:flex;align-items:center;gap:11px;font:inherit;font-weight:700;font-size:16px;color:var(--w);background:#ffffff0d;border:1px solid #ffffff33;border-radius:99px;padding:12px 20px 12px 16px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.jump button::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--o);animation:ping 2.2s infinite}
+.jump button:hover,.jump button:focus-visible{background:var(--o);border-color:var(--o);color:#000;transform:translateX(-4px);outline:none}
+.jump button:hover::before,.jump button:focus-visible::before{background:#000;animation:none}
+@keyframes ping{0%{box-shadow:0 0 0 0 #ff6a1499}70%{box-shadow:0 0 0 10px #ff6a1400}100%{box-shadow:0 0 0 0 #ff6a1400}}
+
+/* frase intermedia */
+#mid{display:flex;align-items:flex-end;justify-content:center;text-align:center;padding:0 20px clamp(60px,10vh,110px)}
+#mid p{font-size:clamp(26px,4.4vw,64px);font-weight:700;letter-spacing:-.02em;line-height:1.05;text-shadow:0 2px 30px #000}
+
+/* bloques de texto */
+.block{display:flex;align-items:center;padding:0 clamp(20px,7vw,120px)}
+.block.r{justify-content:flex-end}
+.block::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#000 0,#000c 28%,#0000 58%)}
+.block.r::before{background:linear-gradient(270deg,#000 0,#000c 28%,#0000 58%)}
+.card{position:relative}
+#end::before{content:"";position:absolute;inset:55% 0 0 0;background:linear-gradient(#0000,#000 60%)}
+#end>*{position:relative}
+.card{max-width:430px}
+.num{font-size:13px;font-weight:700;letter-spacing:.2em;color:var(--o);display:flex;align-items:center;gap:12px}
+.num::after{content:"";height:1px;width:56px;background:var(--o)}
+.card h2{font-size:clamp(34px,4.6vw,68px);font-weight:800;letter-spacing:-.03em;line-height:1;margin:14px 0 16px}
+.card p{font-size:clamp(15px,1.25vw,19px);line-height:1.5;color:#c7c7cc}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chips span{font-size:12px;font-weight:600;padding:6px 11px;border-radius:99px;border:1px solid #ff6a1466;color:var(--o2);background:#ff6a140f}
+
+/* cierre */
+#end{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;padding:0 20px clamp(40px,8vh,90px)}
+#end h2{font-size:clamp(32px,5.2vw,76px);font-weight:800;letter-spacing:-.03em;line-height:1}
+#end p{color:var(--g);margin:12px 0 26px;font-size:clamp(15px,1.4vw,20px)}
+.cta{pointer-events:auto;position:relative;display:inline-flex;align-items:center;gap:12px;font-size:clamp(17px,1.5vw,21px);font-weight:700;color:#000;background:linear-gradient(135deg,var(--o2),var(--o));padding:18px 30px;border-radius:99px;box-shadow:0 0 0 0 #ff6a1466,0 14px 50px -10px #ff6a14b3;animation:pulse 2.4s infinite;transition:transform .25s cubic-bezier(.2,.8,.2,1);overflow:hidden;isolation:isolate}
+.cta::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,#0000 35%,#ffffff8c 50%,#0000 65%);transform:translateX(-120%);animation:shine 3.2s infinite;z-index:-1}
+.cta:hover{transform:scale(1.05)}
+.cta:active{transform:scale(.97)}
+.cta svg{width:24px;height:24px;flex:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 #ff6a1480,0 14px 50px -10px #ff6a14b3}70%{box-shadow:0 0 0 22px #ff6a1400,0 14px 50px -10px #ff6a14b3}100%{box-shadow:0 0 0 0 #ff6a1400,0 14px 50px -10px #ff6a14b3}}
+@keyframes shine{0%,55%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+
+/* boton flotante */
+#fab{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:35;display:flex;align-items:center;gap:9px;font-weight:700;font-size:14px;color:#000;background:var(--o);padding:13px 18px;border-radius:99px;box-shadow:0 10px 34px -8px #ff6a14cc;transform:translateY(90px);opacity:0;transition:transform .5s cubic-bezier(.2,.8,.2,1),opacity .4s}
+#fab.on{transform:none;opacity:1}
+#fab svg{width:20px;height:20px}
+
+/* datos y pie */
+.specs{position:relative;z-index:2;background:#000;padding:clamp(70px,12vh,140px) clamp(20px,6vw,90px) 40px;border-top:1px solid #ffffff14}
+.specs h3{font-size:clamp(26px,3.4vw,48px);font-weight:800;letter-spacing:-.02em;max-width:820px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ffffff1f;margin-top:44px;border:1px solid #ffffff1f;border-radius:18px;overflow:hidden}
+.cell{background:#050505;padding:28px 22px}
+.cell b{display:block;font-size:clamp(34px,4.4vw,62px);font-weight:800;letter-spacing:-.03em;color:var(--o);font-variant-numeric:tabular-nums}
+.cell span{display:block;margin-top:6px;color:#c7c7cc;font-size:14px;line-height:1.4}
+.cell em{display:inline-block;margin-top:10px;font-style:normal;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--g)}
+.note{margin-top:22px;color:var(--g);font-size:13px;line-height:1.55;max-width:820px}
+footer{position:relative;z-index:2;background:#000;padding:34px clamp(20px,6vw,90px) calc(96px + env(safe-area-inset-bottom));color:var(--g);font-size:12.5px;line-height:1.6;border-top:1px solid #ffffff14}
+footer b{color:var(--w)}
+
+@media (max-width:760px){
+  #track{height:940vh}
+  .jump{left:0;right:0;top:auto;bottom:96px;transform:none;flex-direction:row;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;padding:0 16px}
+  .jump small{width:100%;text-align:center;margin:0 0 2px}
+  .jump button{font-size:14px;padding:10px 15px 10px 13px}
+  .block,.block.r{align-items:flex-end;justify-content:flex-start;padding:0 22px max(92px,12vh)}
+  .block::before,.block.r::before{inset:38% 0 0 0;background:linear-gradient(#0000,#000e 40%,#000)}
+  .card{max-width:none}
+  .card h2{margin:10px 0 10px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .brand small{display:none}
+  #end{padding-bottom:max(96px,13vh)}
+}
+@media (prefers-reduced-motion:reduce){.cta,.cta::before,.hint i,.jump button::before{animation:none}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<header class="nav">
+  <div class="brand">T-POWER ECO<small>concepto no oficial</small></div>
+  <a class="navbtn wa" href="#">Consultar</a>
+</header>
+
+<main>
+<section id="track" aria-label="El kit se desarma al bajar">
+  <div id="stage">
+    <canvas id="c" aria-hidden="true"></canvas>
+
+    <div class="layer" id="hero">
+      <div class="eyebrow">Kit hidráulico · 200 litros</div>
+      <h1>T-Power ECO</h1>
+      <div class="sub">Todo el kit. <span class="o">Pieza por pieza.</span></div>
+      <nav class="jump" aria-label="Ir a una pieza"><small>Conocé las piezas</small>
+        <button type="button" data-go="bomba">Bomba</button>
+        <button type="button" data-go="valvula">Válvula</button>
+        <button type="button" data-go="joystick">Joystick</button>
+      </nav>
+      <div class="hint">Bajá para desarmarlo<i></i></div>
+    </div>
+
+    <div class="layer" id="mid"><p>69 piezas.<br><span class="o">Una sola fuerza.</span></p></div>
+
+    <div class="layer block" id="b1"><div class="card">
+      <div class="num">01</div><h2>La bomba</h2>
+      <p>Las bombas de engranajes Hidromas tienen un excelente desempeño en operación basculante: alcanzan niveles de presión sin perder eficiencia volumétrica. Así, con el vehículo completamente cargado, el vuelco no se ralentiza y rinde al máximo en las condiciones de uso más severas.</p>
+      <div class="chips"><span>82 cm³ por vuelta</span><span>Hasta 200 bar</span><span>Salida ISO 7653 o SAE B</span></div>
+    </div></div>
+
+    <div class="layer block r" id="b2"><div class="card">
+      <div class="num">02</div><h2>El depósito</h2>
+      <p>El depósito del kit T-Power ECO para semirremolque guarda hasta 180 litros de aceite y trabaja en un sistema de 190 bar. En el catálogo, el bocal de llenado con filtro de aire anti-salpicadura y el filtro de retorno de 150 L/min son los accesorios para este tipo de equipo.</p>
+      <div class="chips"><span>200 L totales</span><span>180 L de trabajo</span><span>190 bar</span></div>
+    </div></div>
+
+    <div class="layer block" id="b3"><div class="card">
+      <div class="num">03</div><h2>La válvula</h2>
+      <p>La válvula direccional basculante Hidromas está diseñada para garantizar la seguridad de operación y la larga vida útil de tu equipo. Es compacta, con gran capacidad de caudal y presión, y suma lo necesario para operar y controlar: activación por aire comprimido, válvula de alivio que protege el cilindro y el sistema hidráulico, y válvula de retención.</p>
+      <div class="chips"><span>140 L/min</span><span>190 bar</span><span>Montaje sobre tanque</span></div>
+    </div></div>
+
+    <div class="layer block r" id="b4"><div class="card">
+      <div class="num">04</div><h2>El joystick</h2>
+      <p>Comando neumático de 3 posiciones con luz LED, para camiones basculantes. Funciona con aire y atiende la Resolución N.º 859 del CONTRAN.</p>
+      <div class="chips"><span>3 posiciones</span><span>Luz LED</span><span>Aire de 5 a 12 bar</span></div>
+    </div></div>
+
+    <div class="layer" id="end">
+      <h2>Armado. <span class="o">Listo para trabajar.</span></h2>
+      <p>¿Querés este kit en tu camión? Escribinos y lo vemos juntos.</p>
+      <a class="cta wa" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.600-5A8.500 8.500 0 1 1 21 11.500Z"/><path d="M8.500 11.500h.01M12 11.500h.01M15.500 11.500h.01"/></svg>
+        Pedir presupuesto por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="specs">
+  <h3>Los números que importan, <span class="o">sin vueltas.</span></h3>
+  <div class="grid">
+    <div class="cell"><b data-n="200">200</b><span>litros de volumen total del depósito</span><em>Dato oficial</em></div>
+    <div class="cell"><b data-n="180">180</b><span>litros de volumen de trabajo</span><em>Dato oficial</em></div>
+    <div class="cell"><b data-n="190">190</b><span>bar de presión de trabajo</span><em>Dato oficial</em></div>
+    <div class="cell"><b data-n="69">69</b><span>piezas modeladas en 3D para este concepto</span><em>Modelo propio</em></div>
+  </div>
+  <p class="note">Los datos oficiales salen de la ficha y del catálogo público del fabricante. Las medidas del modelo 3D y las piezas internas de la bomba y la válvula son estimadas y genéricas: sirven para mostrar cómo funciona el kit, no como plano técnico.</p>
+</section>
+</main>
+
+<footer>
+  <b>Concepto no oficial hecho por un fan.</b> Esta no es la página oficial de Hidromas ni tiene relación con la marca. T-Power ECO es un producto de Hidromas; acá no se usa su logo. Imágenes generadas en 3D con fines de demostración.
+</footer>
+
+<a id="fab" class="wa" href="#" aria-label="Consultar por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.500a8.500 8.500 0 0 1-12.600 7.400L3 20.500l1.600-5A8.500 8.500 0 1 1 21 11.500Z"/></svg>
+  WhatsApp
+</a>
+
+<script>
+/* ============ CAMBIAR ACA ============ */
+const WHATSAPP_NUMERO = "5493510000000";   // numero con codigo de pais, sin + ni espacios (EJEMPLO: reemplazar)
+const WHATSAPP_MENSAJE = "Hola, vi el kit hidráulico T-Power ECO y quiero un presupuesto.";
+/* ===================================== */
+(() => {
+  const waURL = "https://wa.me/" + WHATSAPP_NUMERO + "?text=" + encodeURIComponent(WHATSAPP_MENSAJE);
+  document.querySelectorAll(".wa").forEach(a => { a.href = waURL; a.target = "_blank"; a.rel = "noopener"; });
+
+  const mobile = matchMedia("(max-width: 760px)").matches;
+  const SET = mobile ? { dir: "frames/m/", w: 900, h: 900 } : { dir: "frames/d/", w: 1600, h: 900 };
+  const N = 144;                       // cuadros (1 de cada 2 de la animacion de 288)
+  const src = i => SET.dir + "f_" + String(i).padStart(3, "0") + ".webp";
+
+  /* guion: p = avance del scroll (0 a 1), f = cuadro, z = zoom, (fx,fy) = punto de la imagen, (tx,ty) = donde cae en pantalla */
+  const HOME = { z: 1, fx: .5, fy: .5, tx: .5, ty: mobile ? .46 : .54 };
+  const HERO = mobile ? { z: .68, fx: .5, fy: .5, tx: .5, ty: .52 } : { z: .64, fx: .5, fy: .5, tx: .5, ty: .64 };
+  const FOC = mobile ? {
+    bomba:   { z: 1.75, fx: .50, fy: .80, tx: .5, ty: .33 },
+    tanque:  { z: 1.25, fx: .50, fy: .50, tx: .5, ty: .34 },
+    valvula: { z: 1.80, fx: .50, fy: .17, tx: .5, ty: .30 },
+    joystick:{ z: 2.40, fx: .90, fy: .43, tx: .5, ty: .30 },
+    fin:     { z: .66, fx: .5, fy: .5, tx: .5, ty: .30 }
+  } : {
+    bomba:   { z: 1.45, fx: .52, fy: .80, tx: .73, ty: .56 },
+    tanque:  { z: 1.15, fx: .49, fy: .50, tx: .33, ty: .52 },
+    valvula: { z: 1.55, fx: .51, fy: .17, tx: .70, ty: .50 },
+    joystick:{ z: 2.60, fx: .745, fy: .43, tx: .30, ty: .50 },
+    fin:     { z: .70, fx: .5, fy: .5, tx: .5, ty: .39 }
+  };
+  const KEYS = [
+    { p: 0,    f: 0,   c: HERO },
+    { p: .05,  f: 5,   c: HERO },
+    { p: .36,  f: 72,  c: HOME },
+    { p: .42,  f: 74,  c: FOC.bomba },
+    { p: .54,  f: 76,  c: FOC.bomba },
+    { p: .58,  f: 77,  c: FOC.tanque },
+    { p: .65,  f: 79,  c: FOC.tanque },
+    { p: .69,  f: 80,  c: FOC.valvula },
+    { p: .76,  f: 81,  c: FOC.valvula },
+    { p: .80,  f: 82,  c: FOC.joystick },
+    { p: .865, f: 84,  c: FOC.joystick },
+    { p: .90,  f: 86,  c: HOME },
+    { p: .965, f: 131, c: FOC.fin },
+    { p: 1,    f: 143, c: FOC.fin }
+  ];
+  /* capas de texto: [id, aparece, pleno, pleno hasta, desaparece] */
+  const LAYERS = [
+    ["hero", -1, -1, .025, .07], ["mid", .14, .19, .30, .36],
+    ["b1", .43, .46, .535, .565], ["b2", .575, .60, .64, .665], ["b3", .675, .70, .745, .77], ["b4", .785, .81, .85, .88],
+    ["end", .945, .975, 2, 3]
+  ].map(a => ({ el: document.getElementById(a[0]), a }));
+
+  const cv = document.getElementById("c"), ctx = cv.getContext("2d", { alpha: false });
+  const track = document.getElementById("track"), bar = document.getElementById("bar"), fab = document.getElementById("fab");
+  let cw = 0, ch = 0, dpr = 1;
+  const imgs = new Array(N), ready = new Uint8Array(N);
+  let loaded = 0;
+
+  function size() {
+    dpr = Math.min(devicePixelRatio || 1, mobile ? 2 : 1.5);
+    cw = cv.clientWidth; ch = cv.clientHeight;
+    cv.width = Math.round(cw * dpr); cv.height = Math.round(ch * dpr);
+    last = -1;
+  }
+
+  /* precarga progresiva: primero el cuadro 0, despues 1 de cada 16, 8, 4, 2 y el resto */
+  function order() {
+    const o = [0], seen = new Set([0]);
+    for (const step of [16, 8, 4, 2, 1]) for (let i = 0; i < N; i += step) if (!seen.has(i)) { seen.add(i); o.push(i); }
+    return o;
+  }
+  function load(i) {
+    return new Promise(res => {
+      const im = new Image(); im.decoding = "async";
+      im.onload = () => { const ok = () => { imgs[i] = im; ready[i] = 1; loaded++; bar.style.transform = "scaleX(" + loaded / N + ")"; if (loaded === N) bar.classList.add("done"); last = -1; res(); };
+        im.decode ? im.decode().then(ok, ok) : ok(); };
+      im.onerror = () => res();
+      im.src = src(i);
+    });
+  }
+  async function preload() {
+    const q = order(); await load(q.shift());
+    const workers = Array.from({ length: mobile ? 4 : 6 }, async () => { while (q.length) await load(q.shift()); });
+    await Promise.all(workers);
+  }
+  function nearest(i) {
+    if (ready[i]) return i;
+    for (let d = 1; d < N; d++) { if (i - d >= 0 && ready[i - d]) return i - d; if (i + d < N && ready[i + d]) return i + d; }
+    return -1;
+  }
+
+  const sm = t => t * t * (3 - 2 * t), lerp = (a, b, t) => a + (b - a) * t;
+  function state(p) {
+    let k = 0; while (k < KEYS.length - 2 && p > KEYS[k + 1].p) k++;
+    const A = KEYS[k], B = KEYS[k + 1], t = Math.min(1, Math.max(0, (p - A.p) / (B.p - A.p))), e = sm(t);
+    const c = {}; for (const key in A.c) c[key] = lerp(A.c[key], B.c[key], e);
+    return { f: lerp(A.f, B.f, t), c };
+  }
+
+  let target = 0, cur = 0, last = -1, lastKey = "";
+  function readScroll() {
+    const r = track.getBoundingClientRect(), total = r.height - innerHeight;
+    target = Math.min(1, Math.max(0, -r.top / total));
+  }
+  function draw(p) {
+    const s = state(p), i = nearest(Math.round(s.f));
+    const key = i + "|" + s.c.z.toFixed(4) + s.c.fx.toFixed(4) + s.c.fy.toFixed(4) + s.c.tx.toFixed(4) + s.c.ty.toFixed(4);
+    if (i >= 0 && key !== lastKey) {
+      lastKey = key;
+      const im = imgs[i], W = cv.width, H = cv.height;
+      const contain = Math.min(W / SET.w, H / SET.h), cover = Math.max(W / SET.w, H / SET.h);
+      const base = mobile ? Math.min(cover, contain * 1.12) : Math.min(cover, contain * 1.18);
+      const sc = base * s.c.z, dw = SET.w * sc, dh = SET.h * sc;
+      const x = s.c.tx * W - s.c.fx * dw, y = s.c.ty * H - s.c.fy * dh;
+      ctx.fillStyle = "#000"; ctx.fillRect(0, 0, W, H);
+      ctx.imageSmoothingQuality = "high";
+      ctx.drawImage(im, x, y, dw, dh);
+    }
+    for (const L of LAYERS) {
+      const [, a, b, c, d] = L.a;
+      let o = p <= a ? 0 : p < b ? (p - a) / (b - a) : p <= c ? 1 : p < d ? 1 - (p - c) / (d - c) : 0;
+      if (a < 0 && p <= c) o = 1;
+      if (o !== L.o) {
+        L.o = o; L.el.style.opacity = o.toFixed(3);
+        const dir = p < b ? 1 : -1;
+        L.el.style.transform = o >= 1 ? "none" : "translate3d(0," + (dir * (1 - o) * 26).toFixed(1) + "px,0)";
+        L.el.style.visibility = o === 0 ? "hidden" : "visible";
+      }
+    }
+    fab.classList.toggle("on", p > .08 && p < .94);
+  }
+  function tick() {
+    const d = target - cur;
+    cur = Math.abs(d) < .0004 ? target : cur + d * (mobile ? .22 : .14);
+    if (cur !== last || lastKey === "") { last = cur; draw(cur); } else if (last === -1) draw(cur);
+    requestAnimationFrame(tick);
+  }
+
+  addEventListener("scroll", readScroll, { passive: true });
+  addEventListener("resize", () => { size(); readScroll(); lastKey = ""; });
+  size(); readScroll(); cur = target;
+  requestAnimationFrame(tick);
+  preload();
+
+  /* botones de piezas: llevan al tramo de esa pieza */
+  const GO = { bomba: .485, valvula: .72, joystick: .83 };
+  document.querySelectorAll("[data-go]").forEach(b => b.addEventListener("click", () => {
+    const y = track.getBoundingClientRect().top + scrollY + (track.offsetHeight - innerHeight) * GO[b.dataset.go];
+    scrollTo({ top: y, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  }));
+
+  /* contador de los numeros */
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return; io.unobserve(e.target);
+    const n = +e.target.dataset.n, t0 = performance.now();
+    const step = t => { const k = Math.min(1, (t - t0) / 1100); e.target.textContent = Math.round(n * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  }), { threshold: .6 });
+  document.querySelectorAll("[data-n]").forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>
